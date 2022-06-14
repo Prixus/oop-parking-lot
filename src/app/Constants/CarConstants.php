@@ -14,7 +14,7 @@ class CarConstants extends BaseConstants
     /**
      * Database Table name and Primary key
      */
-    public const TABLE_NAME = 't_car';
+    public const TABLE_NAME = 't_cars';
     public const PRIMARY_KEY = 'car_no';
 
     /**

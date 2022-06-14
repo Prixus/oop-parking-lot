@@ -15,7 +15,7 @@ class ParkingLotConstants extends BaseConstants
     /**
      * Database Table name and Primary key
      */
-    public const TABLE_NAME = 't_parking_lot';
+    public const TABLE_NAME = 't_parking_lots';
     public const PRIMARY_KEY = 'parking_lot_no';
 
     /**

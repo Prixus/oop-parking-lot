@@ -17,4 +17,6 @@ abstract class BaseConstants
     public const PARKING_LOT_NO = 'parking_lot_no';
     public const PARKING_SLOT_NO = 'parking_slot_no';
     public const PARKING_TRANSACTION_NO = 'parking_transaction_no';
+
+    public const CASCADE = 'cascade';
 }
