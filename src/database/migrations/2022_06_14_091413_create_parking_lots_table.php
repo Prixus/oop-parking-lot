@@ -1,9 +1,16 @@
 <?php
 
+use App\Constants\ParkingLotConstants;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+/**
+ * Parking Lot Table Migration
+ *
+ * @author Simon Peter Calamno
+ * @since 2022.06.14
+ */
 return new class extends Migration
 {
     /**
@@ -13,13 +20,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+        Schema::create(ParkingLotConstants::TABLE_NAME, function (Blueprint $table) {
+            $table->bigIncrements(ParkingLotConstants::PRIMARY_KEY);
+            $table->string(ParkingLotConstants::NAME);
             $table->timestamps();
         });
     }
@@ -31,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists(ParkingLotConstants::TABLE_NAME);
     }
 };
